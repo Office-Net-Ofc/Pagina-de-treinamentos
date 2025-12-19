@@ -2,10 +2,9 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<title>Office Net | Tutorial do Aplicativo</title>
+<title>Office Net | Tutorial Deezer</title>
 
 <style>
-/* RESET */
 * {
     margin: 0;
     padding: 0;
@@ -13,7 +12,6 @@
     font-family: 'Segoe UI', Arial, sans-serif;
 }
 
-/* BODY */
 body {
     background-color: #F0FAF0;
     color: #1f2d1f;
@@ -22,27 +20,24 @@ body {
 /* HEADER */
 header {
     background: linear-gradient(90deg, #3CAA28, #BE961E);
-    color: white;
-    padding: 45px 25px 35px;
+    padding: 40px 25px 30px;
     text-align: center;
+    color: white;
     position: relative;
 }
 
-/* LOGO */
+/* LOGO OFFICE NET */
 .brand-logo {
     position: absolute;
-    top: 18px;
+    top: 15px;
     left: 25px;
-}
-
-.brand-logo img {
-    height: 38px;
+    height: 42px;
 }
 
 /* TITULOS */
 header h1 {
-    font-size: 30px;
-    margin-bottom: 6px;
+    font-size: 28px;
+    margin-bottom: 5px;
 }
 
 header p {
@@ -52,8 +47,8 @@ header p {
 
 /* CONTAINER */
 .container {
-    max-width: 1100px;
-    margin: 50px auto 60px;
+    max-width: 1000px;
+    margin: 40px auto 60px;
     padding: 0 20px;
 }
 
@@ -61,10 +56,10 @@ header p {
 .video-wrapper {
     position: relative;
     padding-top: 56.25%;
-    background: #000;
     border-radius: 18px;
     overflow: hidden;
-    box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    background: #000;
 }
 
 .video-wrapper iframe {
@@ -76,45 +71,30 @@ header p {
     border: none;
 }
 
-/* BOTÃO */
-.actions {
-    margin-top: 35px;
-    text-align: center;
-}
-
-.app-button {
+/* BOTÃO VOLTAR */
+.back-button {
     display: inline-block;
-    padding: 14px 28px;
+    margin-top: 30px;
+    padding: 12px 22px;
     background: linear-gradient(90deg, #3CAA28, #BE961E);
     color: white;
     text-decoration: none;
-    border-radius: 30px;
-    font-size: 15px;
+    border-radius: 25px;
+    font-size: 14px;
     font-weight: bold;
     transition: 0.3s ease;
 }
 
-.app-button:hover {
+.back-button:hover {
     transform: scale(1.05);
-}
-
-/* FOOTER */
-footer {
-    text-align: center;
-    padding: 25px;
-    font-size: 13px;
-    color: #777;
 }
 
 /* RESPONSIVO */
 @media (max-width: 768px) {
-    header h1 {
-        font-size: 24px;
-    }
-
     .brand-logo {
         position: static;
-        margin-bottom: 15px;
+        display: block;
+        margin: 0 auto 15px;
     }
 }
 </style>
@@ -123,9 +103,10 @@ footer {
 <body>
 
 <header>
-    <div class="brand-logo">
-        <img src="https://office-net-ofc.github.io/Pagina-de-treinamentos/img/Logo_Branca_Pequena-sem-fundo.png" alt="Office Net">
-    </div>
+    <img
+        src="https://office-net-ofc.github.io/Pagina-de-treinamentos/img/Logo_Branca_Pequena-sem-fundo.png"
+        alt="Office Net"
+        class="brand-logo">
 
     <h1>Tutorial do Aplicativo</h1>
     <p>Exclusivo para clientes Office Net</p>
@@ -133,27 +114,6 @@ footer {
 
 <main class="container">
 
-    <!-- VIDEO EMBUTIDO (YOUTUBE NÃO LISTADO) -->
     <div class="video-wrapper">
-        <iframe 
-            src="https://www.youtube.com/embed/GtV17lWjWFo?rel=0&modestbranding=1"
-            allowfullscreen>
-        </iframe>
-    </div>
-
-    <!-- BOTÃO VOLTAR -->
-    <div class="actions">
-        <a href="https://office-net-ofc.github.io/Pagina-de-treinamentos/Tutoriais-clientes/tutoriais-clientes-index.html"
-           class="app-button">
-            ⬅ Voltar aos tutoriais
-        </a>
-    </div>
-
-</main>
-
-<footer>
-    © 2025 Office Net
-</footer>
-
-</body>
-</html>
+        <iframe
+            src
