@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<title>Office Net | Tutoriais dos Aplicativos</title>
+<title>Office Net | Tutorial do Aplicativo</title>
 
 <style>
 /* RESET */
@@ -23,120 +23,98 @@ body {
 header {
     background: linear-gradient(90deg, #3CAA28, #BE961E);
     color: white;
-    padding: 45px 25px;
+    padding: 45px 25px 35px;
     text-align: center;
-    position: relative; /* necessário para a marca */
+    position: relative;
 }
 
-/* NOME DA EMPRESA */
-.brand {
+/* LOGO */
+.brand-logo {
     position: absolute;
     top: 18px;
     left: 25px;
-    font-size: 22px;
-    font-weight: 700;
-    letter-spacing: 1px;
+}
+
+.brand-logo img {
+    height: 38px;
 }
 
 /* TITULOS */
 header h1 {
     font-size: 30px;
-    margin-bottom: 8px;
+    margin-bottom: 6px;
 }
 
 header p {
-    font-size: 15px;
-    opacity: 0.95;
+    font-size: 14px;
+    opacity: 0.9;
 }
 
 /* CONTAINER */
 .container {
-    max-width: 900px;
-    margin: 60px auto;
+    max-width: 1100px;
+    margin: 50px auto 60px;
     padding: 0 20px;
 }
 
-/* CARD APP */
-.app-card {
-    background: white;
+/* VIDEO */
+.video-wrapper {
+    position: relative;
+    padding-top: 56.25%;
+    background: #000;
     border-radius: 18px;
-    padding: 30px;
-    margin-bottom: 25px;
-    display: flex;
-    align-items: center;
-    gap: 25px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-    transition: 0.3s ease;
+    overflow: hidden;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.2);
 }
 
-.app-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 16px 35px rgba(0,0,0,0.18);
-}
-
-/* LOGO APP */
-.app-logo {
-    width: 80px;
-    height: 80px;
-    background: #eee;
-    border-radius: 16px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 12px;
-    color: #777;
-    flex-shrink: 0;
-}
-
-/* INFO */
-.app-info {
-    flex: 1;
-}
-
-.app-info h2 {
-    font-size: 20px;
-    margin-bottom: 8px;
-}
-
-.app-info p {
-    font-size: 14px;
-    color: #555;
-    line-height: 1.5;
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
 }
 
 /* BOTÃO */
+.actions {
+    margin-top: 35px;
+    text-align: center;
+}
+
 .app-button {
-    padding: 12px 20px;
+    display: inline-block;
+    padding: 14px 28px;
     background: linear-gradient(90deg, #3CAA28, #BE961E);
     color: white;
     text-decoration: none;
-    border-radius: 25px;
-    font-size: 14px;
+    border-radius: 30px;
+    font-size: 15px;
     font-weight: bold;
     transition: 0.3s ease;
-    white-space: nowrap;
 }
 
 .app-button:hover {
     transform: scale(1.05);
 }
 
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 25px;
+    font-size: 13px;
+    color: #777;
+}
+
 /* RESPONSIVO */
 @media (max-width: 768px) {
-    .brand {
+    header h1 {
+        font-size: 24px;
+    }
+
+    .brand-logo {
         position: static;
         margin-bottom: 15px;
-        display: block;
-        text-align: center;
-    }
-
-    .app-card {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .app-button {
-        margin-top: 15px;
     }
 }
 </style>
@@ -145,45 +123,37 @@ header p {
 <body>
 
 <header>
-    <div class="brand">Office Net</div>
+    <div class="brand-logo">
+        <img src="https://office-net-ofc.github.io/Pagina-de-treinamentos/img/Logo_Branca_Pequena-sem-fundo.png" alt="Office Net">
+    </div>
 
-    <h1>Tutoriais dos Aplicativos</h1>
-    <p>Aprenda a acessar e utilizar nossos aplicativos</p>
+    <h1>Tutorial do Aplicativo</h1>
+    <p>Exclusivo para clientes Office Net</p>
 </header>
 
 <main class="container">
 
-    <!-- APP 1 -->
-    <div class="app-card">
-        <div class="app-logo">Logo App</div>
-
-        <div class="app-info">
-            <h2>App do Cliente Office Net</h2>
-            <p>
-                Consulte faturas, acompanhe consumo, abra chamados e tenha
-                suporte direto pelo aplicativo.
-            </p>
-        </div>
-
-        <a href="https://mickaelfelipe2025.github.io/teste/" class="app-button">Assistir tutorial</a>
+    <!-- VIDEO EMBUTIDO (YOUTUBE NÃO LISTADO) -->
+    <div class="video-wrapper">
+        <iframe 
+            src="https://www.youtube.com/embed/SEU_ID_DO_VIDEO"
+            allowfullscreen>
+        </iframe>
     </div>
 
-    <!-- APP 2 -->
-    <div class="app-card">
-        <div class="app-logo">Logo App</div>
-
-        <div class="app-info">
-            <h2>App Financeiro</h2>
-            <p>
-                Visualize boletos, datas de vencimento e histórico de pagamentos
-                de forma rápida.
-            </p>
-        </div>
-
-        <a href="#" class="app-button">Assistir tutorial</a>
+    <!-- BOTÃO VOLTAR -->
+    <div class="actions">
+        <a href="https://office-net-ofc.github.io/Pagina-de-treinamentos/Tutoriais-clientes/tutoriais-clientes-index.html"
+           class="app-button">
+            ⬅ Voltar aos tutoriais
+        </a>
     </div>
 
 </main>
 
-<footer style="text-align:center; padding:25px; font-size:13px; color:#777;">
+<footer>
     © 2025 Office Net
+</footer>
+
+</body>
+</html>
