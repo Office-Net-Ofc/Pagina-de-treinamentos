@@ -5,7 +5,6 @@
 <title>Office Net | Portal Interno</title>
 
 <style>
-/* RESET */
 * {
     margin: 0;
     padding: 0;
@@ -13,13 +12,11 @@
     font-family: 'Segoe UI', Arial, sans-serif;
 }
 
-/* BODY */
 body {
     background-color: #F0FAF0;
     color: #1f2d1f;
 }
 
-/* HEADER */
 header {
     background: linear-gradient(90deg, #3CAA28, #BE961E);
     color: white;
@@ -34,24 +31,20 @@ header h1 {
 
 header p {
     font-size: 17px;
-    opacity: 0.95;
 }
 
 header .frase {
     margin-top: 18px;
     font-size: 15px;
     font-style: italic;
-    opacity: 0.9;
 }
 
-/* CONTAINER */
 .container {
     max-width: 1100px;
     margin: 70px auto;
     padding: 0 20px;
 }
 
-/* INFO INSTITUCIONAL */
 .info {
     background: white;
     padding: 40px;
@@ -73,8 +66,8 @@ header .frase {
 .info li {
     margin-bottom: 12px;
     font-size: 16px;
-    position: relative;
     padding-left: 22px;
+    position: relative;
 }
 
 .info li::before {
@@ -86,7 +79,6 @@ header .frase {
     top: -2px;
 }
 
-/* AVISO */
 .aviso {
     background: #fff8e6;
     border-left: 6px solid #BE961E;
@@ -96,14 +88,12 @@ header .frase {
     font-size: 15px;
 }
 
-/* BOTÕES */
 .buttons {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 30px;
 }
 
-/* BOTÃO PADRÃO */
 .button {
     background: white;
     border: 2px solid #3CAA28;
@@ -121,7 +111,6 @@ header .frase {
 .button span {
     display: block;
     font-size: 14px;
-    font-weight: normal;
     margin-top: 12px;
     color: #555;
 }
@@ -136,42 +125,16 @@ header .frase {
     color: #f0faf0;
 }
 
-/* BOTÃO PREMIUM */
 .button-premium {
     background: linear-gradient(135deg, #BE961E, #3CAA28);
     border: none;
     color: white;
-    transform: scale(1.03);
-    position: relative;
-    overflow: hidden;
 }
 
 .button-premium span {
     color: #f0faf0;
 }
 
-.button-premium::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: -75%;
-    width: 50%;
-    height: 100%;
-    background: rgba(255,255,255,0.2);
-    transform: skewX(-20deg);
-}
-
-.button-premium:hover::after {
-    left: 130%;
-    transition: 0.6s;
-}
-
-.button-premium:hover {
-    transform: scale(1.06) translateY(-10px);
-    box-shadow: 0 20px 45px rgba(0,0,0,0.25);
-}
-
-/* FOOTER */
 footer {
     margin-top: 90px;
     text-align: center;
@@ -209,20 +172,22 @@ footer {
     </section>
 
     <section class="buttons">
-        <a href="#" class="button">
+
+        <a href="https://office-net-ofc.github.io/Pagina-de-treinamentos/Tutoriais-sistemas/Tutoriais-sistemas-index.html" class="button">
             Treinamentos do Sistema
             <span>Processos internos, sistemas e rotinas operacionais</span>
         </a>
 
-        <a href="#" class="button">
+        <a href="https://office-net-ofc.github.io/Pagina-de-treinamentos/Tutoriais-clientes/tutoriais-clientes-index.html" class="button">
             Tutoriais para Clientes
             <span>Orientações sobre aplicativos e serviços Office Net</span>
         </a>
 
-        <a href="https://mickaelfelipe2025.github.io/Tutoriais-clientes-teste/" class="button button-premium">
+        <a href="https://office-net-ofc.github.io/Pagina-de-treinamentos/Cursos-internos/Cursos-internos-index.html" class="button button-premium">
             Cursos Internos Office Net
             <span>Desenvolvimento profissional e crescimento na empresa</span>
         </a>
+
     </section>
 
 </main>
