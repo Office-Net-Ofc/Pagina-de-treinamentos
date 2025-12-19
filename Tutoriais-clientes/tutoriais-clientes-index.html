@@ -25,7 +25,7 @@ header {
     color: white;
     padding: 45px 25px;
     text-align: center;
-    position: relative; /* necessário para a marca */
+    position: relative;
 }
 
 /* NOME DA EMPRESA */
@@ -49,10 +49,21 @@ header p {
     opacity: 0.95;
 }
 
+/* FAIXA AVISO */
+.notice-bar {
+    background-color: #FFF4D6; /* amarelo discreto */
+    color: #7A5A00;
+    text-align: center;
+    padding: 6px 10px;
+    font-size: 13px;
+    font-weight: 500;
+    border-bottom: 1px solid #F0E2B6;
+}
+
 /* CONTAINER */
 .container {
     max-width: 900px;
-    margin: 60px auto;
+    margin: 50px auto 60px;
     padding: 0 20px;
 }
 
@@ -78,14 +89,18 @@ header p {
 .app-logo {
     width: 80px;
     height: 80px;
-    background: #eee;
+    background: #F0FAF0;
     border-radius: 16px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 12px;
-    color: #777;
     flex-shrink: 0;
+}
+
+.app-logo img {
+    max-width: 65px;
+    max-height: 65px;
+    object-fit: contain;
 }
 
 /* INFO */
@@ -146,16 +161,22 @@ header p {
 
 <header>
     <div class="brand">Office Net</div>
-
     <h1>Tutoriais dos Aplicativos</h1>
     <p>Aprenda a acessar e utilizar nossos aplicativos</p>
 </header>
 
+<!-- FAIXA AVISO -->
+<div class="notice-bar">
+    📢 Em breve mais vídeos estarão disponíveis para você
+</div>
+
 <main class="container">
 
-    <!-- APP 1 -->
+    <!-- APP 1 - PROVEDOR -->
     <div class="app-card">
-        <div class="app-logo">Logo App</div>
+        <div class="app-logo">
+            <img src="https://office-net-ofc.github.io/Pagina-de-treinamentos/img/mwu_provedor-removebg-preview.png" alt="App Provedor">
+        </div>
 
         <div class="app-info">
             <h2>App do Cliente Office Net</h2>
@@ -165,18 +186,73 @@ header p {
             </p>
         </div>
 
-        <a href="https://mickaelfelipe2025.github.io/teste/" class="app-button">Assistir tutorial</a>
+        <a href="https://mickaelfelipe2025.github.io/teste/" class="app-button">
+            Assistir tutorial
+        </a>
     </div>
 
-    <!-- APP 2 -->
+    <!-- APP 2 - HBO MAX -->
     <div class="app-card">
-        <div class="app-logo">Logo App</div>
+        <div class="app-logo">
+            <img src="https://office-net-ofc.github.io/Pagina-de-treinamentos/img/hbo_max-removebg-preview.png" alt="HBO Max">
+        </div>
 
         <div class="app-info">
-            <h2>App Financeiro</h2>
+            <h2>HBO Max</h2>
             <p>
-                Visualize boletos, datas de vencimento e histórico de pagamentos
-                de forma rápida.
+                Aprenda como acessar, criar perfil e utilizar todos os recursos
+                da plataforma HBO Max.
+            </p>
+        </div>
+
+        <a href="#" class="app-button">Assistir tutorial</a>
+    </div>
+
+    <!-- APP 3 - SKY + PARAMOUNT -->
+    <div class="app-card">
+        <div class="app-logo">
+            <img src="https://office-net-ofc.github.io/Pagina-de-treinamentos/img/SKY+Paramount-removebg-preview.png" alt="SKY + Paramount+">
+        </div>
+
+        <div class="app-info">
+            <h2>SKY + Paramount+</h2>
+            <p>
+                Veja como acessar o conteúdo da SKY e do Paramount+ de forma
+                simples e rápida.
+            </p>
+        </div>
+
+        <a href="#" class="app-button">Assistir tutorial</a>
+    </div>
+
+    <!-- APP 4 - DEEZER -->
+    <div class="app-card">
+        <div class="app-logo">
+            <img src="https://office-net-ofc.github.io/Pagina-de-treinamentos/img/deezer-removebg-preview.png" alt="Deezer">
+        </div>
+
+        <div class="app-info">
+            <h2>Deezer</h2>
+            <p>
+                Aprenda a usar o Deezer para ouvir músicas, criar playlists
+                e aproveitar todos os benefícios.
+            </p>
+        </div>
+
+        <a href="#" class="app-button">Assistir tutorial</a>
+    </div>
+
+    <!-- APP 5 - LOOKE -->
+    <div class="app-card">
+        <div class="app-logo">
+            <img src="https://office-net-ofc.github.io/Pagina-de-treinamentos/img/look.png" alt="Looke">
+        </div>
+
+        <div class="app-info">
+            <h2>Looke</h2>
+            <p>
+                Saiba como acessar filmes, séries e conteúdos exclusivos
+                na plataforma Looke.
             </p>
         </div>
 
@@ -187,3 +263,7 @@ header p {
 
 <footer style="text-align:center; padding:25px; font-size:13px; color:#777;">
     © 2025 Office Net
+</footer>
+
+</body>
+</html>
