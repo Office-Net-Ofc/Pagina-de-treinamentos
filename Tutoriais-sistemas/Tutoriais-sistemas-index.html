@@ -23,30 +23,38 @@ body {
 header {
     background: linear-gradient(90deg, #3CAA28, #BE961E);
     color: white;
-    padding: 45px 25px;
+    padding: 50px 25px 40px;
     text-align: center;
     position: relative;
 }
 
-/* NOME DA EMPRESA */
+/* LOGO HEADER */
 .brand {
     position: absolute;
     top: 18px;
     left: 25px;
-    font-size: 22px;
-    font-weight: 700;
-    letter-spacing: 1px;
+}
+
+.brand img {
+    height: 38px;
+    width: auto;
 }
 
 /* TITULOS */
 header h1 {
-    font-size: 30px;
-    margin-bottom: 8px;
+    font-size: 32px;
+    margin-bottom: 10px;
 }
 
 header p {
     font-size: 15px;
     opacity: 0.95;
+}
+
+header .subtitle {
+    font-size: 13px;
+    opacity: 0.85;
+    margin-top: 6px;
 }
 
 /* CONTAINER */
@@ -58,28 +66,31 @@ header p {
 
 /* CARD APP */
 .app-card {
-    background: white;
+    background: linear-gradient(180deg, #ffffff, #fdfdfd);
     border-radius: 18px;
-    padding: 30px;
-    margin-bottom: 25px;
+    padding: 32px;
+    margin-bottom: 28px;
     display: flex;
     align-items: center;
     gap: 25px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-    transition: 0.3s ease;
+
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
 }
 
 .app-card:hover {
     transform: translateY(-4px);
-    box-shadow: 0 16px 35px rgba(0,0,0,0.18);
+    box-shadow: 0 10px 22px rgba(0,0,0,0.14);
 }
 
 /* LOGO APP */
 .app-logo {
-    width: 80px;
-    height: 80px;
-    background: #f4f4f4;
-    border-radius: 16px;
+    width: 82px;
+    height: 82px;
+    background: #ffffff;
+    border-radius: 18px;
+    padding: 10px;
+
     display: flex;
     align-items: center;
     justify-content: center;
@@ -87,9 +98,14 @@ header p {
 }
 
 .app-logo img {
-    max-width: 70%;
-    max-height: 70%;
+    max-width: 100%;
+    max-height: 100%;
     object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.app-card:hover .app-logo img {
+    transform: scale(1.08);
 }
 
 /* INFO */
@@ -98,31 +114,44 @@ header p {
 }
 
 .app-info h2 {
-    font-size: 20px;
+    font-size: 21px;
+    font-weight: 600;
     margin-bottom: 8px;
+    color: #1f2d1f;
 }
 
 .app-info p {
     font-size: 14px;
-    color: #555;
-    line-height: 1.5;
+    color: #6b6b6b;
+    line-height: 1.6;
 }
 
 /* BOTÃO */
 .app-button {
-    padding: 12px 20px;
+    padding: 12px 22px;
     background: linear-gradient(90deg, #3CAA28, #BE961E);
     color: white;
     text-decoration: none;
     border-radius: 25px;
     font-size: 14px;
-    font-weight: bold;
-    transition: 0.3s ease;
+    font-weight: 600;
+    transition: all 0.3s ease;
     white-space: nowrap;
 }
 
 .app-button:hover {
-    transform: scale(1.05);
+    transform: scale(1.06);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.18);
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 30px;
+    font-size: 13px;
+    color: #777;
+    background: #ffffff;
+    border-top: 1px solid #e0e0e0;
 }
 
 /* RESPONSIVO */
@@ -130,7 +159,6 @@ header p {
     .brand {
         position: static;
         margin-bottom: 15px;
-        display: block;
         text-align: center;
     }
 
@@ -149,15 +177,18 @@ header p {
 <body>
 
 <header>
-    <div class="brand">Office Net</div>
+    <div class="brand">
+        <img src="https://office-net-ofc.github.io/Pagina-de-treinamentos/img/Logo_Branca_Pequena-sem-fundo.png" alt="Office Net">
+    </div>
 
     <h1>Tutoriais dos Sistemas</h1>
     <p>Aprenda a acessar e utilizar nossos sistemas</p>
+    <div class="subtitle">Portal interno • Acesso rápido e seguro</div>
 </header>
 
 <main class="container">
 
-    <!-- APP 1 - SISTEMA DE GERENCIAMENTO -->
+    <!-- APP 1 -->
     <div class="app-card">
         <div class="app-logo">
             <img src="https://office-net-ofc.github.io/Pagina-de-treinamentos/img/sgp.png" alt="Sistema de Gerenciamento">
@@ -176,7 +207,7 @@ header p {
         </a>
     </div>
 
-    <!-- APP 2 - CHAT BOT -->
+    <!-- APP 2 -->
     <div class="app-card">
         <div class="app-logo">
             <img src="https://office-net-ofc.github.io/Pagina-de-treinamentos/img/focus_chat.png" alt="Sistema de Chat Bot">
@@ -197,8 +228,8 @@ header p {
 
 </main>
 
-<footer style="text-align:center; padding:25px; font-size:13px; color:#777;">
-    © 2025 Office Net
+<footer>
+    © 2025 Office Net • Todos os direitos reservados
 </footer>
 
 </body>
