@@ -1,1 +1,247 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Office Net | Aula</title>
 
+<style>
+/* ================= RESET ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+/* ================= VARIÁVEIS ================= */
+:root {
+    --bg: #F0FAF0;
+    --text: #1f2d1f;
+    --card: #ffffff;
+    --muted: #5f6f5f;
+    --green: #3CAA28;
+    --gold: #BE961E;
+    --shadow: 0 14px 35px rgba(0,0,0,0.1);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg: #0f1a12;
+        --text: #e8f5e8;
+        --card: #16241a;
+        --muted: #9fb3a0;
+        --shadow: 0 18px 40px rgba(0,0,0,0.45);
+    }
+}
+
+/* ================= BODY ================= */
+body {
+    background: var(--bg);
+    color: var(--text);
+    transition: .4s ease;
+}
+
+/* ================= HEADER ================= */
+header {
+    background: linear-gradient(90deg, var(--green), var(--gold));
+    padding: 22px 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.brand {
+    position: absolute;
+    left: 25px;
+}
+
+.brand img {
+    height: 42px;
+}
+
+header h1 {
+    color: #fff;
+    font-size: 22px;
+}
+
+/* ================= HERO ================= */
+.hero {
+    max-width: 1200px;
+    margin: 40px auto 20px;
+    padding: 0 20px;
+}
+
+.hero span {
+    font-size: 13px;
+    color: var(--muted);
+}
+
+.hero h2 {
+    font-size: 32px;
+    margin: 6px 0;
+}
+
+.hero p {
+    font-size: 15px;
+    color: var(--muted);
+    max-width: 720px;
+}
+
+/* ================= CONTAINER ================= */
+.container {
+    max-width: 1200px;
+    margin: 30px auto 80px;
+    padding: 0 20px;
+}
+
+/* ================= VIDEO ================= */
+.video-card {
+    background: var(--card);
+    border-radius: 22px;
+    padding: 24px;
+    box-shadow: var(--shadow);
+    margin-bottom: 30px;
+    animation: fadeUp .6s ease forwards;
+}
+
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%;
+    border-radius: 18px;
+    overflow: hidden;
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* ================= ACTIONS ================= */
+.actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 22px;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.btn {
+    padding: 12px 22px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: .3s ease;
+    display: inline-block;
+}
+
+.btn-primary {
+    background: linear-gradient(90deg, var(--green), var(--gold));
+    color: #fff;
+}
+
+.btn-primary:hover {
+    transform: scale(1.05);
+}
+
+.btn-secondary {
+    border: 2px solid var(--green);
+    color: var(--green);
+}
+
+.btn-secondary:hover {
+    background: var(--green);
+    color: #fff;
+}
+
+/* ================= ANIMAÇÃO ================= */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ================= FOOTER ================= */
+footer {
+    text-align: center;
+    padding: 30px;
+    font-size: 13px;
+    color: var(--muted);
+}
+
+/* ================= RESPONSIVO ================= */
+@media (max-width: 768px) {
+    .hero h2 {
+        font-size: 26px;
+    }
+
+    .actions {
+        flex-direction: column;
+    }
+
+    .btn {
+        text-align: center;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="brand">
+        <img src="https://office-net-ofc.github.io/Pagina-de-treinamentos/img/Logo_Branca_Pequena-sem-fundo.png">
+    </div>
+    <h1>Aula</h1>
+</header>
+
+<section class="hero">
+    <span>Curso • Onboarding Office Net</span>
+    <h2>Aula 01 — Boas-vindas à Office Net</h2>
+    <p>Nesta aula você conhecerá a história da empresa, seus valores e a visão que norteia nosso trabalho diário.</p>
+</section>
+
+<main class="container">
+
+    <!-- PLAYER -->
+    <div class="video-card">
+        <div class="video-wrapper">
+            <!-- TROQUE O ID DO VÍDEO -->
+            <iframe 
+                src="https://www.youtube.com/embed/OKpSAzB66hU"
+                allowfullscreen>
+            </iframe>
+        </div>
+
+        <!-- AÇÕES -->
+        <div class="actions">
+            <!-- VOLTAR -->
+            <a href="curso.html" class="btn btn-secondary">
+                ← Voltar para as aulas
+            </a>
+
+            <!-- PRÓXIMA AULA -->
+            <a href="aula02.html" class="btn btn-primary">
+                Próxima aula →
+            </a>
+        </div>
+    </div>
+
+</main>
+
+<footer>
+    © 2025 Office Net — Universidade Corporativa
+</footer>
+
+</body>
+</html>
