@@ -2,9 +2,10 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<title>Office Net | Portal Interno</title>
+<title>Office Net | Tutoriais dos Aplicativos</title>
 
 <style>
+/* RESET */
 * {
     margin: 0;
     padding: 0;
@@ -12,156 +13,131 @@
     font-family: 'Segoe UI', Arial, sans-serif;
 }
 
+/* BODY */
 body {
     background-color: #F0FAF0;
     color: #1f2d1f;
 }
 
+/* HEADER */
 header {
-    position: relative;
     background: linear-gradient(90deg, #3CAA28, #BE961E);
     color: white;
+    padding: 45px 25px;
     text-align: center;
-    padding: 70px 20px;
+    position: relative; /* necessário para a marca */
 }
 
-/* LOGO */
-.header-logo {
+/* NOME DA EMPRESA */
+.brand {
     position: absolute;
-    top: 20px;
-    left: 20px;
+    top: 18px;
+    left: 25px;
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 1px;
 }
 
-.header-logo img {
-    height: 55px;
-    width: auto;
-}
-
-/* Responsivo */
-@media (max-width: 600px) {
-    .header-logo img {
-        height: 42px;
-    }
-}
-
+/* TITULOS */
 header h1 {
-    font-size: 34px;
-    margin-bottom: 12px;
+    font-size: 30px;
+    margin-bottom: 8px;
 }
 
 header p {
-    font-size: 17px;
-}
-
-header .frase {
-    margin-top: 18px;
     font-size: 15px;
-    font-style: italic;
+    opacity: 0.95;
 }
 
+/* CONTAINER */
 .container {
-    max-width: 1100px;
-    margin: 70px auto;
+    max-width: 900px;
+    margin: 60px auto;
     padding: 0 20px;
 }
 
-.info {
+/* CARD APP */
+.app-card {
     background: white;
-    padding: 40px;
-    border-radius: 16px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-    margin-bottom: 60px;
-}
-
-.info h2 {
-    color: #3CAA28;
-    margin-bottom: 20px;
-    font-size: 26px;
-}
-
-.info ul {
-    list-style: none;
-}
-
-.info li {
-    margin-bottom: 12px;
-    font-size: 16px;
-    padding-left: 22px;
-    position: relative;
-}
-
-.info li::before {
-    content: "•";
-    color: #BE961E;
-    font-size: 24px;
-    position: absolute;
-    left: 0;
-    top: -2px;
-}
-
-.aviso {
-    background: #fff8e6;
-    border-left: 6px solid #BE961E;
-    padding: 18px 25px;
-    border-radius: 10px;
-    margin-bottom: 60px;
-    font-size: 15px;
-}
-
-.buttons {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 30px;
-}
-
-.button {
-    background: white;
-    border: 2px solid #3CAA28;
     border-radius: 18px;
-    padding: 50px 30px;
-    text-align: center;
-    font-size: 18px;
-    font-weight: bold;
-    text-decoration: none;
-    color: #1f2d1f;
-    transition: all 0.35s ease;
-    box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+    padding: 30px;
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    transition: 0.3s ease;
 }
 
-.button span {
-    display: block;
-    font-size: 14px;
-    margin-top: 12px;
-    color: #555;
+.app-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 35px rgba(0,0,0,0.18);
 }
 
-.button:hover {
-    background-color: #3CAA28;
-    color: white;
-    transform: translateY(-8px);
-}
-
-.button:hover span {
-    color: #f0faf0;
-}
-
-.button-premium {
-    background: linear-gradient(135deg, #BE961E, #3CAA28);
-    border: none;
-    color: white;
-}
-
-.button-premium span {
-    color: #f0faf0;
-}
-
-footer {
-    margin-top: 90px;
-    text-align: center;
-    padding: 25px;
-    font-size: 13px;
+/* LOGO APP */
+.app-logo {
+    width: 80px;
+    height: 80px;
+    background: #eee;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
     color: #777;
-    border-top: 1px solid #ddd;
+    flex-shrink: 0;
+}
+
+/* INFO */
+.app-info {
+    flex: 1;
+}
+
+.app-info h2 {
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.app-info p {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.5;
+}
+
+/* BOTÃO */
+.app-button {
+    padding: 12px 20px;
+    background: linear-gradient(90deg, #3CAA28, #BE961E);
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: bold;
+    transition: 0.3s ease;
+    white-space: nowrap;
+}
+
+.app-button:hover {
+    transform: scale(1.05);
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+    .brand {
+        position: static;
+        margin-bottom: 15px;
+        display: block;
+        text-align: center;
+    }
+
+    .app-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .app-button {
+        margin-top: 15px;
+    }
 }
 </style>
 </head>
@@ -169,58 +145,45 @@ footer {
 <body>
 
 <header>
+    <div class="brand">Office Net</div>
 
-    <div class="header-logo">
-        <img src="https://office-net-ofc.github.io/Pagina-de-treinamentos/img/Logo_Branca_Pequena-sem-fundo.png">
-    </div>
-
-    <h1>Portal Interno Office Net</h1>
-    <p>Central de treinamentos e orientações corporativas</p>
-    <div class="frase">“Conhecimento certo gera atendimento excelente.”</div>
-
+    <h1>Tutoriais dos Aplicativos</h1>
+    <p>Aprenda a acessar e utilizar nossos aplicativos</p>
 </header>
 
 <main class="container">
 
-    <section class="info">
-        <h2>Propósito deste portal</h2>
-        <ul>
-            <li>Padronizar processos e boas práticas internas</li>
-            <li>Elevar a qualidade do atendimento ao cliente</li>
-            <li>Capacitar continuamente os colaboradores</li>
-            <li>Fortalecer a cultura e o crescimento profissional</li>
-        </ul>
-    </section>
+    <!-- APP 1 -->
+    <div class="app-card">
+        <div class="app-logo">Logo App</div>
 
-    <section class="aviso">
-        🔔 <strong>Aviso Interno:</strong> Novos cursos de atendimento e suporte técnico
-        serão disponibilizados em breve neste portal.
-    </section>
+        <div class="app-info">
+            <h2>App do Cliente Office Net</h2>
+            <p>
+                Consulte faturas, acompanhe consumo, abra chamados e tenha
+                suporte direto pelo aplicativo.
+            </p>
+        </div>
 
-    <section class="buttons">
+        <a href="https://mickaelfelipe2025.github.io/teste/" class="app-button">Assistir tutorial</a>
+    </div>
 
-        <a href="https://office-net-ofc.github.io/Pagina-de-treinamentos/Tutoriais-sistemas/Tutoriais-sistemas-index.html" class="button">
-            Treinamentos do Sistema
-            <span>Processos internos, sistemas e rotinas operacionais</span>
-        </a>
+    <!-- APP 2 -->
+    <div class="app-card">
+        <div class="app-logo">Logo App</div>
 
-        <a href="https://office-net-ofc.github.io/Pagina-de-treinamentos/Tutoriais-clientes/tutoriais-clientes-index.html" class="button">
-            Tutoriais para Clientes
-            <span>Orientações sobre aplicativos e serviços Office Net</span>
-        </a>
+        <div class="app-info">
+            <h2>App Financeiro</h2>
+            <p>
+                Visualize boletos, datas de vencimento e histórico de pagamentos
+                de forma rápida.
+            </p>
+        </div>
 
-        <a href="https://office-net-ofc.github.io/Pagina-de-treinamentos/Cursos-internos/Cursos-internos-index.html" class="button button-premium">
-            Cursos Internos Office Net
-            <span>Desenvolvimento profissional e crescimento na empresa</span>
-        </a>
-
-    </section>
+        <a href="#" class="app-button">Assistir tutorial</a>
+    </div>
 
 </main>
 
-<footer>
-    © 2025 Office Net — Portal interno corporativo
-</footer>
-
-</body>
-</html>
+<footer style="text-align:center; padding:25px; font-size:13px; color:#777;">
+    © 2025 Office Net
