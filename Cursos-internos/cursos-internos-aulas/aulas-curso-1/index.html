@@ -1,1 +1,322 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Office Net | Curso - Onboarding</title>
 
+<style>
+/* ================= RESET ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+/* ================= VARIÁVEIS ================= */
+:root {
+    --bg: #F0FAF0;
+    --text: #1f2d1f;
+    --card: #ffffff;
+    --muted: #5f6f5f;
+    --green: #3CAA28;
+    --gold: #BE961E;
+    --shadow: 0 14px 35px rgba(0,0,0,0.1);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg: #0f1a12;
+        --text: #e8f5e8;
+        --card: #16241a;
+        --muted: #9fb3a0;
+        --shadow: 0 18px 40px rgba(0,0,0,0.45);
+    }
+}
+
+/* ================= BODY ================= */
+body {
+    background: var(--bg);
+    color: var(--text);
+    transition: .4s ease;
+}
+
+/* ================= HEADER ================= */
+header {
+    background: linear-gradient(90deg, var(--green), var(--gold));
+    padding: 22px 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.brand {
+    position: absolute;
+    left: 25px;
+}
+
+.brand img {
+    height: 42px;
+}
+
+header h1 {
+    color: #fff;
+    font-size: 22px;
+}
+
+/* ================= HERO ================= */
+.hero {
+    max-width: 1200px;
+    margin: 50px auto 25px;
+    padding: 0 20px;
+}
+
+.hero h2 {
+    font-size: 34px;
+    margin-bottom: 8px;
+}
+
+.hero p {
+    font-size: 16px;
+    color: var(--muted);
+    max-width: 720px;
+}
+
+/* ================= CONTAINER ================= */
+.container {
+    max-width: 1200px;
+    margin: 30px auto 80px;
+    padding: 0 20px;
+}
+
+/* ================= VIDEO INTRO ================= */
+.intro-video {
+    background: var(--card);
+    border-radius: 22px;
+    padding: 24px;
+    box-shadow: var(--shadow);
+    margin-bottom: 40px;
+    animation: fadeUp .6s ease forwards;
+}
+
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%;
+    border-radius: 18px;
+    overflow: hidden;
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.intro-video h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.intro-video p {
+    font-size: 14px;
+    color: var(--muted);
+    margin-bottom: 16px;
+}
+
+/* ================= AULA CARD ================= */
+.lesson-card {
+    background: var(--card);
+    border-radius: 18px;
+    padding: 22px 26px;
+    margin-bottom: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: var(--shadow);
+    opacity: 0;
+    transform: translateY(25px);
+    animation: fadeUp .6s ease forwards;
+    transition: .3s ease;
+    cursor: pointer;
+}
+
+.lesson-card:nth-child(1){animation-delay:.1s}
+.lesson-card:nth-child(2){animation-delay:.2s}
+.lesson-card:nth-child(3){animation-delay:.3s}
+.lesson-card:nth-child(4){animation-delay:.4s}
+.lesson-card:nth-child(5){animation-delay:.5s}
+
+.lesson-card:hover {
+    transform: translateY(-4px);
+}
+
+/* ================= ANIMAÇÃO ================= */
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ================= INFO ================= */
+.lesson-info {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.lesson-number {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: linear-gradient(90deg, var(--green), var(--gold));
+    color: #fff;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lesson-text h3 {
+    font-size: 16px;
+    margin-bottom: 4px;
+}
+
+.lesson-text p {
+    font-size: 13px;
+    color: var(--muted);
+}
+
+/* ================= AÇÃO ================= */
+.lesson-action {
+    font-size: 13px;
+    font-weight: bold;
+    color: var(--green);
+}
+
+/* ================= FOOTER ================= */
+footer {
+    text-align: center;
+    padding: 30px;
+    font-size: 13px;
+    color: var(--muted);
+}
+
+/* ================= RESPONSIVO ================= */
+@media (max-width: 768px) {
+    .lesson-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 14px;
+    }
+
+    .lesson-action {
+        align-self: flex-end;
+    }
+
+    .hero h2 {
+        font-size: 28px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="brand">
+        <img src="https://office-net-ofc.github.io/Pagina-de-treinamentos/img/Logo_Branca_Pequena-sem-fundo.png">
+    </div>
+    <h1>Curso</h1>
+</header>
+
+<section class="hero">
+    <h2>Onboarding Office Net</h2>
+    <p>Conheça a estrutura do curso, os objetivos de aprendizagem e o que será abordado em cada etapa da sua jornada na empresa.</p>
+</section>
+
+<main class="container">
+
+    <!-- VÍDEO INTRODUTÓRIO -->
+    <section class="intro-video">
+        <h3>Apresentação do Curso</h3>
+        <p>Neste vídeo você terá uma visão geral do conteúdo programático, metodologia e expectativas do curso.</p>
+
+        <div class="video-wrapper">
+            <!-- TROQUE O ID DO VÍDEO -->
+            <iframe 
+                src="https://www.youtube.com/embed/OKpSAzB66hU"
+                allowfullscreen>
+            </iframe>
+        </div>
+    </section>
+
+    <!-- AULAS -->
+    <div class="lesson-card">
+        <div class="lesson-info">
+            <div class="lesson-number">01</div>
+            <div class="lesson-text">
+                <h3>Boas-vindas à Office Net</h3>
+                <p>Apresentação institucional e visão da empresa</p>
+            </div>
+        </div>
+        <div class="lesson-action">Assistir aula</div>
+    </div>
+
+    <div class="lesson-card">
+        <div class="lesson-info">
+            <div class="lesson-number">02</div>
+            <div class="lesson-text">
+                <h3>Valores e Cultura Organizacional</h3>
+                <p>Como pensamos, agimos e atendemos</p>
+            </div>
+        </div>
+        <div class="lesson-action">Assistir aula</div>
+    </div>
+
+    <div class="lesson-card">
+        <div class="lesson-info">
+            <div class="lesson-number">03</div>
+            <div class="lesson-text">
+                <h3>Padrão de Atendimento ao Cliente</h3>
+                <p>Postura profissional e comunicação</p>
+            </div>
+        </div>
+        <div class="lesson-action">Assistir aula</div>
+    </div>
+
+    <div class="lesson-card">
+        <div class="lesson-info">
+            <div class="lesson-number">04</div>
+            <div class="lesson-text">
+                <h3>Sistemas Utilizados na Empresa</h3>
+                <p>Visão geral das ferramentas internas</p>
+            </div>
+        </div>
+        <div class="lesson-action">Assistir aula</div>
+    </div>
+
+    <div class="lesson-card">
+        <div class="lesson-info">
+            <div class="lesson-number">05</div>
+            <div class="lesson-text">
+                <h3>Encerramento e Próximos Passos</h3>
+                <p>Orientações finais e evolução interna</p>
+            </div>
+        </div>
+        <div class="lesson-action">Assistir aula</div>
+    </div>
+
+</main>
+
+<footer>
+    © 2025 Office Net — Universidade Corporativa
+</footer>
+
+</body>
+</html>
